@@ -13,3 +13,18 @@ public class FilmAgeCheck
     {
       int ageOfPersonAtQueuePosition = Integer.parseInt(args[queuePosition]);
       if (ageOfPersonAtQueuePosition < minimumAge)
+       {
+        System.out.println("The person at position " + queuePosition
+                           + " is only" + ageOfPersonAtQueuePosition
+                           + ", which is less than " + minimumAge);
+        underAgeCountSoFar++;
+       }//if
+    }//for
+
+    // Now report how many underage were found
+    if (underAgeCountSoFar == 1)
+      System.out.println("The is 1 under age");
+    else
+      System.out.println("There are " + underAgeCountSoFar + " under age");
+  }// main
+}// class FilmAgeCheck
